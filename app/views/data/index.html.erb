@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medições de Humidade</h1>
+
+
+<table>
+  <thead>
+    <tr>
+   
+      <th>Time</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Percentage</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+ 
+        <td><%= datum.timestamp %></td>
+        <td><%= datum.alias %></td>
+        <td><%= datum.voltage %> V </td>
+        <td><%= datum.percentage %> %</td>
+        <td><%= link_to 'Show', datum %></td>
+        <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+        <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datum', new_datum_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>hora:</strong>
+  <%= @datum.timestamp%>
+</p>
+
+<p>
+  <strong>id:</strong>
+  <%= @datum.id %>
+</p>
+
+<p>
+  <strong>nome:</strong>
+  <%= @datum.alias %>
+</p>
+
+<p>
+  <strong>tensão:</strong>
+  <%= @datum.voltage %> V
+</p>
+
+<p>
+  <strong>Percentagem:</strong>
+  <%= @datum.percentage %> %
+</p>
+
+<%= link_to 'Edit', edit_datum_path(@datum) %> |
+<%= link_to 'Back', data_path %>
+

@@ -1,0 +1,2045 @@
+Started GET "/" for 127.0.0.1 at 2017-10-28 18:48:38 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 167ms (Views: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 18:54:13 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (138.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1999073259241716420)[0m
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (70.9ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171028165247"]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-28 16:55:05.445031"], ["updated_at", "2017-10-28 16:55:05.445031"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1999073259241716420)[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-28 18:55:18 +0200
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 16ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-28 18:55:24 +0200
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (13.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (537.8ms)
+Completed 200 OK in 1254ms (Views: 1056.1ms | ActiveRecord: 193.0ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-28 18:55:30 +0200
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (9.1ms)
+  Rendered data/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 116ms (Views: 31.5ms | ActiveRecord: 52.8ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-28 18:55:31 +0200
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jMHkKUWowxXAlPaGjS4TglwBa+lvMmUXntEkdTvqs9LBeB4hThTrBd5B9A7IFiZcRKlXpDt1Nnu5LCCRnVzRMQ==", "commit"=>"Create Datum"}
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.4ms)[0m  [1m[32mINSERT INTO "data" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 16:55:31.145054"], ["updated_at", "2017-10-28 16:55:31.145054"]]
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/1
+Completed 302 Found in 39ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/data/1" for 127.0.0.1 at 2017-10-28 18:55:31 +0200
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (4.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 57ms (Views: 27.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-28 18:55:34 +0200
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (6.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 57ms (Views: 49.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/data/1" for 127.0.0.1 at 2017-10-28 18:55:35 +0200
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (4.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 25.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/data/1/edit" for 127.0.0.1 at 2017-10-28 18:55:37 +0200
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (4.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (1.8ms)
+  Rendered data/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 23.9ms | ActiveRecord: 10.7ms)
+
+
+Started PATCH "/data/1" for 127.0.0.1 at 2017-10-28 18:55:37 +0200
+Processing by DataController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LEtOP7efJIvdNJXuiTJHiX8u6zj59Ih2kbSpLPi4ecoZbybsxltftIOmWYbIJ8MBqwEGIbMRa9aP1OcqTEVzHg==", "commit"=>"Update Datum", "id"=>"1"}
+  [1m[36mDatum Load (4.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/1
+Completed 302 Found in 18ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/data/1" for 127.0.0.1 at 2017-10-28 18:55:37 +0200
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (4.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 20.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/data/1/edit" for 127.0.0.1 at 2017-10-28 18:55:39 +0200
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (6.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (1.8ms)
+  Rendered data/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 23.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-28 18:55:42 +0200
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (4.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-28 18:55:44 +0200
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (2.3ms)
+  Rendered data/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-28 18:55:44 +0200
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MP6NFyrxNHLYmYeKyIWRh84keKNGJCMy+yQo3kNoJY59R3cfIU0cYsZMhQKNvaRZ1oxE7hJjcF7c2Sw65d5HbQ==", "commit"=>"Create Datum"}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[32mINSERT INTO "data" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-28 16:55:44.937781"], ["updated_at", "2017-10-28 16:55:44.937781"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/2
+Completed 302 Found in 23ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/data/2" for 127.0.0.1 at 2017-10-28 18:55:44 +0200
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDatum Load (5.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 21.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 09:22:27 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 09:22:32 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (39.5ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (556.6ms)
+Completed 200 OK in 584ms (Views: 530.4ms | ActiveRecord: 52.8ms)
+
+
+Started GET "/data/1/edit" for 127.0.0.1 at 2017-10-29 09:22:39 +0100
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (26.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (2.4ms)
+  Rendered data/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 375ms (Views: 25.6ms | ActiveRecord: 43.5ms)
+
+
+Started PATCH "/data/1" for 127.0.0.1 at 2017-10-29 09:22:44 +0100
+Processing by DataController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YaZKvGzGUJ1JHI6HybhlORzw9ZdvNjW3ZClmYBXv7HpUgiJvHQIroheOQu+IreGxyN8YjiXT1hd6SShmoRLmrg==", "commit"=>"Update Datum", "id"=>"1"}
+  [1m[36mDatum Load (5.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/1
+Completed 302 Found in 103ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/data/1" for 127.0.0.1 at 2017-10-29 09:22:44 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (6.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 25.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 09:22:49 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (6.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 87ms (Views: 79.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 09:22:51 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (2.4ms)
+  Rendered data/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-29 09:22:52 +0100
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3FDNwKhfhyg64GIsrRe1ZiGvYnGCUlSMn1f/q1bC9daR6TfIo+OvOCQ1YKToL4C4OQdePNYVB+C4qvtP8HSXNQ==", "commit"=>"Create Datum"}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "data" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-29 08:22:52.330615"], ["updated_at", "2017-10-29 08:22:52.330615"]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/3
+Completed 302 Found in 36ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/data/3" for 127.0.0.1 at 2017-10-29 09:22:52 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDatum Load (9.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 29.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 09:22:53 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (4.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 09:22:54 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (1.8ms)
+  Rendered data/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-29 09:22:55 +0100
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CCnINCHjDBenfL5otPUz7BxFg0bORromNnKnygjopqRFkDI8Kl8kB7mpvODxzQYyBO2/C5oB6UoRj6Murl7ERw==", "commit"=>"Create Datum"}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO "data" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-10-29 08:22:55.630924"], ["updated_at", "2017-10-29 08:22:55.630924"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data/4
+Completed 302 Found in 31ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/data/4" for 127.0.0.1 at 2017-10-29 09:22:55 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDatum Load (4.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 25.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 09:22:57 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (4.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/data/1" for 127.0.0.1 at 2017-10-29 10:36:10 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDatum Load (8.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 133ms (Views: 27.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 10:36:11 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (5.7ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 11:19:30 +0100
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DataController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/johny/workspace/rails/testapp/app/models/datum.rb:2: syntax error, unexpected ':', expecting keyword_end
+  validates :timestamp :id, :alias, :voltage, :percent
+                        ^
+/home/johny/workspace/rails/testapp/app/models/datum.rb:2: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+idates :timestamp :id, :alias, :voltage, :percent, presence:
+                              ^):
+  
+app/models/datum.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/models/datum.rb:2: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+app/controllers/data_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 11:20:23 +0100
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (82.3ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (174.8ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 152.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `timestamp' for #<Datum:0x000000048b8630>):
+    20:   <tbody>
+    21:     <% @data.each do |datum| %>
+    22:       <tr>
+    23:         <td><%= datum.timestamp %></td>
+    24:         <td><%= datum.id %></td>
+    25:         <td><%= datum.alias %></td>
+    26:         <td><%= datum.voltage %></td>
+  
+app/views/data/index.html.erb:23:in `block in _app_views_data_index_html_erb___29995246891683767_38664640'
+app/views/data/index.html.erb:21:in `_app_views_data_index_html_erb___29995246891683767_38664640'
+Started GET "/" for 127.0.0.1 at 2017-10-29 11:48:57 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "plantmonitoing" does not exist
+):
+  
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:699:in `rescue in connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-29 11:49:16 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1667.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (126.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+Started GET "/" for 127.0.0.1 at 2017-10-29 11:51:07 +0100
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/data" for 127.0.0.1 at 2017-10-29 11:51:11 +0100
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (13.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.5ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+Started GET "/" for 127.0.0.1 at 2017-10-29 12:35:28 +0100
+  [1m[35m (21.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.9ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "timestamp" timestamp, "alias" character varying, "voltage" float, "percentage" float)[0m
+  [1m[35m (3.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3948943150272629880)[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateData (20171028165247)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (137.3ms)[0m  [1m[35mCREATE TABLE "data" ("id" bigserial primary key, "timestamp" timestamp, "alias" character varying, "voltage" float, "percentage" float)[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171028165247"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (10.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-29 11:42:35.148821"], ["updated_at", "2017-10-29 11:42:35.148821"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3948943150272629880)[0m
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-29 12:46:54 +0100
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (43.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 373ms (Views: 295.1ms | ActiveRecord: 65.4ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 12:47:01 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (17.5ms)
+  Rendered data/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 502ms (Views: 37.1ms | ActiveRecord: 183.3ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 12:47:10 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (11.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 96ms (Views: 82.4ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 12:47:19 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (4.7ms)
+  Rendered data/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-29 12:47:20 +0100
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SYl7T1/N8WkfgUs1d0bKNd50rBhMl7KPZwxQZftNfSgn9/lNsMf1bqrB6SQ5S72z9Hu/TV1DaYaYTWlMVtXFw==", "datum"=>{"id"=>"", "alias"=>"", "voltage"=>""}, "commit"=>"Create Datum"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/data_controller.rb:27:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-29 12:47:29 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (20.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 48ms (Views: 26.0ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:01:22 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (8.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (47.3ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `percent' for #<Datum:0x007f6b1c36e640>
+Did you mean?  percentage):
+    24:         <td><%= datum.timestamp %></td>
+    25:         <td><%= datum.alias %></td>
+    26:         <td><%= datum.voltage %></td>
+    27:         <td><%= datum.percent %></td>
+    28:         <td><%= link_to 'Show', datum %></td>
+    29:         <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+    30:         <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/data/index.html.erb:27:in `block in _app_views_data_index_html_erb__662955058433069440_70049005721820'
+app/views/data/index.html.erb:21:in `_app_views_data_index_html_erb__662955058433069440_70049005721820'
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:03:21 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (19.0ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 82ms (Views: 61.5ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:03:46 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (15.7ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 76ms (Views: 59.3ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:03:47 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (24.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 77ms (Views: 51.8ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:03:52 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (16.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 139ms (Views: 121.0ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/data/52" for 127.0.0.1 at 2017-10-29 13:04:15 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mDatum Load (11.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 15.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `votlage' for #<Datum:0x007f6b140dd500>
+Did you mean?  voltage):
+    17: 
+    18: <p>
+    19:   <strong>tensão:</strong>
+    20:   <%= @datum.votlage %> V
+    21: </p>
+    22: 
+    23: <p>
+  
+app/views/data/show.html.erb:20:in `_app_views_data_show_html_erb___260358286425389817_70048937336940'
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:04:17 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (15.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 93ms (Views: 77.0ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/data/13/edit" for 127.0.0.1 at 2017-10-29 13:04:18 +0100
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mDatum Load (4.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (3.9ms)
+  Rendered data/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 41ms (Views: 29.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:07:19 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (32.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 138ms (Views: 104.2ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 13:33:27 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (24.5ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 120ms (Views: 93.8ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:13:27 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (50.6ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (111.7ms)
+Completed 200 OK in 132ms (Views: 79.5ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:13:32 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (32.3ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (145.5ms)
+Completed 200 OK in 167ms (Views: 132.8ms | ActiveRecord: 32.3ms)
+
+
+Started DELETE "/data/131" for 127.0.0.1 at 2017-10-29 14:13:46 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MAcRZBaewpGhFoYUmvL+v2aO8gbLHfjKxDZZh7OHYvLCnNbn4biX/TaJVU1XIUAvIvGmr0BKVhUHYXd6+TyBcg==", "id"=>"131"}
+  [1m[36mDatum Load (8.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 131]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 74ms (ActiveRecord: 28.2ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:13:46 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (25.7ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 103ms (Views: 75.4ms | ActiveRecord: 25.7ms)
+
+
+Started DELETE "/data/1" for 127.0.0.1 at 2017-10-29 14:13:51 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rSfT+BH5pA2WI5EpWTpCrU2KNPY3Fnd8M+xY4Wxr2KtfvBR75t/xYQG8QnCU6fw9CfVgX7xB2aPwu3YcJtA7Kw==", "id"=>"1"}
+  [1m[36mDatum Load (5.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 1]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 81ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:13:51 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (27.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 108ms (Views: 79.7ms | ActiveRecord: 27.4ms)
+
+
+Started DELETE "/data/2" for 127.0.0.1 at 2017-10-29 14:13:53 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kWkcunaKsppEsl1M1V5+mirKLeyT03jicxHOtt/sVb9j8ts5gazn9tMtjhUYjcAKbrV5RRiE1j2wRuBLlVe2Pw==", "id"=>"2"}
+  [1m[36mDatum Load (5.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 2]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 37ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:13:53 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (31.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (86.8ms)
+Completed 200 OK in 116ms (Views: 83.6ms | ActiveRecord: 31.1ms)
+
+
+Started DELETE "/data/0" for 127.0.0.1 at 2017-10-29 14:13:55 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZDasTfuKHjizkfP9Xlm1fU/GqiXXwmLy7X2KT+HTgYKWrWvODKxLVCQOIKSTigvtC7n+jFyVzC0uKqSyq2hiAg==", "id"=>"0"}
+  [1m[36mDatum Load (4.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.3ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 0]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 52ms (ActiveRecord: 41.8ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:13:55 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (63.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (145.2ms)
+Completed 200 OK in 167ms (Views: 101.5ms | ActiveRecord: 63.8ms)
+
+
+Started DELETE "/data/3" for 127.0.0.1 at 2017-10-29 14:13:57 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y0aJyOTTR0E6kxS9Bu1h49slyljljBKTqKm1/qd+t+o53U5LE/USLa0Mx+TLPt9zn1qe8W7bvExr/psD7cVUag==", "id"=>"3"}
+  [1m[36mDatum Load (17.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 3]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 45ms (ActiveRecord: 32.7ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:13:57 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (28.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 122ms (Views: 91.5ms | ActiveRecord: 28.9ms)
+
+
+Started DELETE "/data/4" for 127.0.0.1 at 2017-10-29 14:14:00 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CH9Z7wLLm6G3jcooSGjMtt3GWsA8XZjfsBEIa+JqbyD65J5s9e3OzSASGXGFu3ImmbkOabcKNgBzRiaWqNGMoA==", "id"=>"4"}
+  [1m[36mDatum Load (4.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 4]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 31ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:14:00 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (25.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (83.6ms)
+Completed 200 OK in 107ms (Views: 80.1ms | ActiveRecord: 25.4ms)
+
+
+Started DELETE "/data/5" for 127.0.0.1 at 2017-10-29 14:14:03 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xYreHq+tW1kFo9FDJcJ+FS7orq9Q+NIi5TdQ8BJvjm83ERmdWIsONZI8AhroEcCFapf6BtuvfP0mYH4NWNRt7w==", "id"=>"5"}
+  [1m[36mDatum Load (3.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.0ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 5]]
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 67ms (ActiveRecord: 32.5ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:14:03 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (240.6ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (301.6ms)
+Completed 200 OK in 321ms (Views: 79.2ms | ActiveRecord: 240.6ms)
+
+
+Started GET "/data/6/edit" for 127.0.0.1 at 2017-10-29 14:14:04 +0100
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDatum Load (11.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (4.1ms)
+  Rendered data/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 97ms (Views: 23.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/data/6" for 127.0.0.1 at 2017-10-29 14:14:07 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDatum Load (6.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `votlage' for #<Datum:0x007f6b14052fb8>
+Did you mean?  voltage):
+    17: 
+    18: <p>
+    19:   <strong>tensão:</strong>
+    20:   <%= @datum.votlage %> V
+    21: </p>
+    22: 
+    23: <p>
+  
+app/views/data/show.html.erb:20:in `_app_views_data_show_html_erb___260358286425389817_70048937053400'
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:14:22 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (26.2ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (193.0ms)
+Completed 200 OK in 215ms (Views: 187.2ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:19:36 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (51.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (130.3ms)
+Completed 200 OK in 153ms (Views: 100.3ms | ActiveRecord: 51.8ms)
+
+
+Started DELETE "/data/234" for 127.0.0.1 at 2017-10-29 14:20:49 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PCqwAeykM5Dq0m8pPkOOOcKl3VxAquXTsjEfMhU/Xw3OsXeCG4Jm/H1NvHDzkDCphtqJ9cv9SwxxZjHPX4S8jQ==", "id"=>"234"}
+  [1m[36mDatum Load (8.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 234], ["LIMIT", 1]]
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 234]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 87ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:49 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (37.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (145.1ms)
+Completed 200 OK in 165ms (Views: 125.6ms | ActiveRecord: 37.9ms)
+
+
+Started DELETE "/data/7" for 127.0.0.1 at 2017-10-29 14:20:52 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s/YAslqlenDrL3Z9X11MFDHY0EG/7In9jMpJq7B5vRZBbccxrYMvHHywpSSSjvKEdaeE6DS7JyJPnWdW+sJelg==", "id"=>"7"}
+  [1m[36mDatum Load (3.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 7]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 29ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:52 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (35.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (130.6ms)
+Completed 200 OK in 152ms (Views: 115.1ms | ActiveRecord: 35.4ms)
+
+
+Started DELETE "/data/6" for 127.0.0.1 at 2017-10-29 14:20:55 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I0hB9ar35EALpweXgm5kFNvWRB1u8L8jW5LaXK58dBfR04Z2XdGxLJw41M5PvdqEn6kQtOWnEfyYxfSh5MeXlw==", "id"=>"6"}
+  [1m[36mDatum Load (4.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.9ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 6]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 138ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:55 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (76.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (175.8ms)
+Completed 200 OK in 201ms (Views: 122.4ms | ActiveRecord: 76.8ms)
+
+
+Started DELETE "/data/8" for 127.0.0.1 at 2017-10-29 14:20:56 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F+5k3gs5iShbCXsEvdAVss4Wom/go2UaBdQp1hr8pGfldaNd/B/cRMyWqF1wA6siimn2xmv0y8XGgwcrUEdH5w==", "id"=>"8"}
+  [1m[36mDatum Load (3.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.5ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 8]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 111ms (ActiveRecord: 22.6ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:56 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (52.5ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (168.5ms)
+Completed 200 OK in 191ms (Views: 137.1ms | ActiveRecord: 52.5ms)
+
+
+Started DELETE "/data/9" for 127.0.0.1 at 2017-10-29 14:20:57 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"W9Ta1UrbILKbBV4yWuuvgnEQ3H8x0fk9qo8R2z0CVeCpTx1Wvf113gyajWuXOBESNW+I1rqGV+Jp2D8md7m2YA==", "id"=>"9"}
+  [1m[36mDatum Load (3.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 9]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 32ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:57 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (38.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 157ms (Views: 116.7ms | ActiveRecord: 38.9ms)
+
+
+Started DELETE "/data/10" for 127.0.0.1 at 2017-10-29 14:20:58 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"39Gd+CJsEQqngPWwLQUHQLYdC9vU3NN0nJ73Y0NsNrwtSlp71UpEZjAfJung1rnQ8mJfcl+LfatfydmeCdfVPA==", "id"=>"10"}
+  [1m[36mDatum Load (3.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.8ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 10]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 32ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:58 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (47.4ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (142.3ms)
+Completed 200 OK in 180ms (Views: 130.9ms | ActiveRecord: 47.4ms)
+
+
+Started DELETE "/data/11" for 127.0.0.1 at 2017-10-29 14:20:59 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5g2NkO/ZdJSZju+IwDAAECw3SN+bHBE8Nt3+ZQG8TWIUlkoTGP8h+A4RPNEN476AaEgcdhBLv+P1itCYSweu4g==", "id"=>"11"}
+  [1m[36mDatum Load (3.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[31mDELETE FROM "data" WHERE "data"."id" = $1[0m  [["id", 11]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/data
+Completed 302 Found in 33ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:20:59 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (43.5ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (149.4ms)
+Completed 200 OK in 173ms (Views: 128.6ms | ActiveRecord: 43.5ms)
+
+
+Started DELETE "/data/11" for 127.0.0.1 at 2017-10-29 14:20:59 +0100
+Processing by DataController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5g2NkO/ZdJSZju+IwDAAECw3SN+bHBE8Nt3+ZQG8TWIUlkoTGP8h+A4RPNEN476AaEgcdhBLv+P1itCYSweu4g==", "id"=>"11"}
+  [1m[36mDatum Load (4.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 4.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Datum with 'id'=11):
+  
+app/controllers/data_controller.rb:67:in `set_datum'
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:21:02 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (33.0ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (142.5ms)
+Completed 200 OK in 164ms (Views: 130.0ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:22:30 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (7.0ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 89ms (Views: 80.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:24:12 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:24: syntax error, unexpected '<', expecting keyword_end
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:25: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:26: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_end
+@output_buffer.safe_append=' V </td>
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:27: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:28: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:28: syntax error, unexpected tCONSTANT, expecting keyword_end
+_buffer.append=( link_to 'Show', datum );@output_buffer.safe
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:29: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+ffer.append=( link_to 'Destroy', datum, method: :delete, dat
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+:delete, data: { confirm: 'Are you sure?' } );@output_buffer
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:31: unknown regexp options - tr
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:34: unknown regexp options - tabl
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:36: syntax error, unexpected '<'
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:38: syntax error, unexpected tCONSTANT, expecting keyword_end
+t_buffer.append=( link_to 'New Datum', new_datum_path );
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:40: unterminated string meets end of file
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/data/index.html.erb:24: syntax error, unexpected '<', expecting keyword_end
+app/views/data/index.html.erb:25: unknown regexp options - td
+app/views/data/index.html.erb:26: syntax error, unexpected '<'
+app/views/data/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:27: unknown regexp options - td
+app/views/data/index.html.erb:28: syntax error, unexpected '<'
+app/views/data/index.html.erb:28: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:29: unknown regexp options - td
+app/views/data/index.html.erb:30: syntax error, unexpected '<'
+app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:31: unknown regexp options - tr
+app/views/data/index.html.erb:34: unknown regexp options - tabl
+app/views/data/index.html.erb:36: syntax error, unexpected '<'
+app/views/data/index.html.erb:38: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:40: unterminated string meets end of file
+app/views/data/index.html.erb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:24:15 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:24: syntax error, unexpected '<', expecting keyword_end
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:25: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:26: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_end
+@output_buffer.safe_append=' V </td>
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:27: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:28: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:28: syntax error, unexpected tCONSTANT, expecting keyword_end
+_buffer.append=( link_to 'Show', datum );@output_buffer.safe
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:29: unknown regexp options - td
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected '<'
+        <td>'.freeze;@output_buffer.app
+         ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+ffer.append=( link_to 'Destroy', datum, method: :delete, dat
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+:delete, data: { confirm: 'Are you sure?' } );@output_buffer
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:31: unknown regexp options - tr
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:34: unknown regexp options - tabl
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:36: syntax error, unexpected '<'
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:38: syntax error, unexpected tCONSTANT, expecting keyword_end
+t_buffer.append=( link_to 'New Datum', new_datum_path );
+                              ^
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:40: unterminated string meets end of file
+/home/johny/workspace/rails/testapp/app/views/data/index.html.erb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/data/index.html.erb:24: syntax error, unexpected '<', expecting keyword_end
+app/views/data/index.html.erb:25: unknown regexp options - td
+app/views/data/index.html.erb:26: syntax error, unexpected '<'
+app/views/data/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:27: unknown regexp options - td
+app/views/data/index.html.erb:28: syntax error, unexpected '<'
+app/views/data/index.html.erb:28: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:29: unknown regexp options - td
+app/views/data/index.html.erb:30: syntax error, unexpected '<'
+app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:30: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:31: unknown regexp options - tr
+app/views/data/index.html.erb:34: unknown regexp options - tabl
+app/views/data/index.html.erb:36: syntax error, unexpected '<'
+app/views/data/index.html.erb:38: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/views/data/index.html.erb:40: unterminated string meets end of file
+app/views/data/index.html.erb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:24:55 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (6.8ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 107ms (Views: 98.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 14:25:03 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (4.4ms)
+  Rendered data/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-29 14:25:20 +0100
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zVovAkALk9bkEjN7elkWZOU5htduOiCDNxoc74WGKhWA49UKS7e7xvrHMfM/YSO6/ZG6mjp9c+8Q5xgLIzBI9g==", "datum"=>{"id"=>"0", "alias"=>"Nada", "voltage"=>"0", "percentage"=>"0"}, "commit"=>"Create Datum"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/data_controller.rb:27:in `create'
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:29:38 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (4.3ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 27.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/data/0" for 127.0.0.1 at 2017-10-29 14:29:43 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mDatum Load (10.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 113ms (Views: 22.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/data/0/edit" for 127.0.0.1 at 2017-10-29 14:29:52 +0100
+Processing by DataController#edit as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mDatum Load (5.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering data/edit.html.erb within layouts/application
+  Rendered data/_form.html.erb (4.3ms)
+  Rendered data/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 243ms (Views: 29.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/data/new" for 127.0.0.1 at 2017-10-29 14:29:55 +0100
+Processing by DataController#new as HTML
+  Rendering data/new.html.erb within layouts/application
+  Rendered data/_form.html.erb (3.6ms)
+  Rendered data/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data" for 127.0.0.1 at 2017-10-29 14:29:57 +0100
+Processing by DataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xfmC87ITdT7vgTQwpx7Rto6peEzMfL3O1kGbcNxU5TqIQHj7ua9dLvFUNrjiJuRolgFEAZg77qLxvJ+UeuKH2Q==", "datum"=>{"id"=>"", "alias"=>"", "voltage"=>"", "percentage"=>""}, "commit"=>"Create Datum"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/data_controller.rb:27:in `create'
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:30:01 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (5.1ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 96ms (Views: 89.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:31:50 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (5.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:32:00 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (8.9ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 42ms (Views: 31.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/data" for 127.0.0.1 at 2017-10-29 14:32:23 +0100
+Processing by DataController#index as HTML
+  Rendering data/index.html.erb within layouts/application
+  [1m[36mDatum Load (6.6ms)[0m  [1m[34mSELECT "data".* FROM "data"[0m
+  Rendered data/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 41ms (Views: 33.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:38:06 +0100
+  
+SyntaxError (/home/johny/workspace/rails/testapp/app/controllers/data_controller.rb:75: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/data_controller.rb:75: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:38:39 +0100
+  
+SyntaxError (/home/johny/workspace/rails/testapp/app/controllers/data_controller.rb:75: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/data_controller.rb:75: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:40:03 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 143ms (Views: 27.3ms | ActiveRecord: 95.6ms)
+
+
+Started GET "/data/17" for 127.0.0.1 at 2017-10-29 14:40:11 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDatum Load (3.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 342ms (Views: 20.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:40:14 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (8.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 50ms (Views: 32.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/data/17" for 127.0.0.1 at 2017-10-29 14:40:15 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDatum Load (3.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 27.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:40:18 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 42ms (Views: 26.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/data/17" for 127.0.0.1 at 2017-10-29 14:40:20 +0100
+Processing by DataController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDatum Load (3.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" WHERE "data"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering data/show.html.erb within layouts/application
+  Rendered data/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 42.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:44:22 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (26.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 112.6ms)
+
+
+  
+NoMethodError (undefined method `setTimeout' for #<DataController:0x007f6b1c6930c8>):
+  
+app/controllers/data_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:44:51 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (275.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 275.9ms)
+
+
+  
+NoMethodError (undefined method `setTimeout' for #<Class:0x007f6b1c3e2090>):
+  
+app/controllers/data_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:44:56 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 13.1ms)
+
+
+  
+NoMethodError (undefined method `setTimeout' for #<Class:0x007f6b1c3e2090>):
+  
+app/controllers/data_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:49:48 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (15.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 207ms (Views: 29.4ms | ActiveRecord: 87.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:50:14 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 46ms (Views: 29.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:50:25 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 55ms (Views: 32.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:50:28 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 51ms (Views: 34.5ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:50:30 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (19.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 60ms (Views: 30.1ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:50:32 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 47ms (Views: 29.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:51:01 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 100.8ms)
+
+
+  
+NoMethodError (undefined method `after_update' for #<DataController:0x007f6b0c666a60>):
+  
+app/controllers/data_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:51:28 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/data_controller.rb:12:in `after_update'
+app/controllers/data_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:52:52 +0100
+  
+ActionController::RoutingError (undefined method `after_filter' for DataController:Class
+Did you mean?  after_action):
+  
+app/controllers/data_controller.rb:3:in `<class:DataController>'
+app/controllers/data_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:53:13 +0100
+  
+ActionController::RoutingError (undefined method `after_update' for DataController:Class
+Did you mean?  after_action):
+  
+app/controllers/data_controller.rb:3:in `<class:DataController>'
+app/controllers/data_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:53:27 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (14.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 149ms (Views: 31.6ms | ActiveRecord: 97.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:53:33 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 71ms (Views: 30.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 14:54:05 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (441.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 825ms (Views: 28.3ms | ActiveRecord: 580.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:39 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 480ms (Views: 422.9ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:42 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 50ms (Views: 30.1ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:45 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (15.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 176ms (Views: 26.5ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:47 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 52ms (Views: 29.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:50 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 50ms (Views: 28.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:52 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 45ms (Views: 28.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:54 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 49ms (Views: 30.5ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:57 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 52ms (Views: 32.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:00:59 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (20.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 108ms (Views: 33.2ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:02 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 59ms (Views: 28.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:04 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (14.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 49ms (Views: 27.6ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:06 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (24.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 73ms (Views: 39.4ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:09 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (45.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 82ms (Views: 28.6ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:11 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 59ms (Views: 28.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:14 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 48ms (Views: 29.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:16 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 48ms (Views: 31.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:18 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 51ms (Views: 27.6ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:21 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (8.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 52ms (Views: 36.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:23 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 47ms (Views: 29.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:25 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (16.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 51ms (Views: 27.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:28 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (17.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 55ms (Views: 29.8ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:30 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 47ms (Views: 29.5ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:32 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 51ms (Views: 31.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:35 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 72ms (Views: 29.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:37 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (71.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 115ms (Views: 31.2ms | ActiveRecord: 71.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:39 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 48ms (Views: 29.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:42 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 45ms (Views: 28.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:44 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 47ms (Views: 29.3ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:46 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 59ms (Views: 35.0ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:49 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 44ms (Views: 25.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:51 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (16.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 57ms (Views: 30.3ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:53 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 59ms (Views: 29.7ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:56 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 47ms (Views: 27.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:01:58 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (9.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 53ms (Views: 36.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:00 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.5ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 55ms (Views: 25.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:03 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (17.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 57ms (Views: 32.8ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:05 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (16.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 52ms (Views: 28.8ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:07 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 49ms (Views: 25.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:10 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 52ms (Views: 30.8ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:12 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 53ms (Views: 30.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:02:42 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (16.9ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 141ms (Views: 38.4ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:03:13 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (14.6ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 111ms (Views: 29.0ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:03:19 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (10.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 52ms (Views: 34.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:03:28 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 49ms (Views: 28.3ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:03:58 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 49ms (Views: 29.0ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:04:29 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 151ms (Views: 31.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:04:59 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.2ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 84ms (Views: 32.0ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:05:30 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (11.7ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 115ms (Views: 30.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:06:00 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (13.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 160ms (Views: 32.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:06:31 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (24.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 186ms (Views: 28.3ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:07:01 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (82.4ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 268ms (Views: 39.1ms | ActiveRecord: 82.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:07:32 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (65.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 205ms (Views: 28.6ms | ActiveRecord: 65.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:08:02 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (20.0ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 130ms (Views: 30.7ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:09:30 +0100
+  [1m[35m (138.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (140.1ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 529ms (Views: 256.9ms | ActiveRecord: 232.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:13:40 +0100
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (12.3ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 443ms (Views: 253.0ms | ActiveRecord: 149.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:13:45 +0100
+Processing by DataController#index as HTML
+  [1m[36mDatum Load (24.8ms)[0m  [1m[34mSELECT  "data".* FROM "data" ORDER BY "data"."id" DESC LIMIT $1[0m  [["LIMIT", 20]]
+  Rendering data/index.html.erb within layouts/application
+  Rendered data/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 578ms (Views: 61.5ms | ActiveRecord: 161.8ms)
+
+
