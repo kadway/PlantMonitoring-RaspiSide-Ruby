@@ -1,30 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>hora:</strong>
-  <%= @datum.timestamp%>
-</p>
+<h1><%= datum.alias %> historic </h1>
 
-<p>
-  <strong>id:</strong>
-  <%= @datum.id %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Percentage</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>nome:</strong>
-  <%= @datum.alias %>
-</p>
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+ 
+        <td><%= datum.timestamp %></td>
+        <td><%= datum.alias %></td>
+        <td><%= datum.voltage %> V </td>
+        <td><%= datum.percentage %> %</td>
+        <td><%= link_to 'Show', datum %></td>
+        <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+        <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <strong>tensão:</strong>
-  <%= @datum.voltage %> V
-</p>
-
-<p>
-  <strong>Percentagem:</strong>
-  <%= @datum.percentage %> %
-</p>
-
-<%= link_to 'Edit', edit_datum_path(@datum) %> |
-<%= link_to 'Back', data_path %>
-
+<br>

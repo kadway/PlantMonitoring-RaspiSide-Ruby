@@ -4,7 +4,6 @@ class DataController < ApplicationController
   # GET /data
   # GET /data.json
   def index
-   # @data = Datum.all
      @data = Datum.order(id: :desc).limit(6).each do |d| end
   end
   
@@ -16,6 +15,7 @@ class DataController < ApplicationController
   # GET /data/1.json
   def show
  #Thing.active.find_each(batch_size: 50000) { |t| puts t.id }
+    @data = Datum.where(alias: @alias).order(id: :desc).limit(50).each do |d| end
   #    @data = Datum.order(id: :desc).limit(50).each do |d| end
   end
 
