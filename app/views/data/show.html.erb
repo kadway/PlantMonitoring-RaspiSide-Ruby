@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
 
-<h1><%= datum.alias %> historic </h1>
+<h1><%= @datum.alias %> historic </h1> <%= link_to 'Back', data_path %>
 
 <table>
   <thead>
@@ -16,14 +15,13 @@
   </thead>
 
   <tbody>
-    <% @data.each do |datum| %>
+    <% @plant.each do |datum| %>
       <tr>
  
         <td><%= datum.timestamp %></td>
         <td><%= datum.alias %></td>
         <td><%= datum.voltage %> V </td>
         <td><%= datum.percentage %> %</td>
-        <td><%= link_to 'Show', datum %></td>
         <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
         <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

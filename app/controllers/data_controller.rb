@@ -15,7 +15,7 @@ class DataController < ApplicationController
   # GET /data/1.json
   def show
  #Thing.active.find_each(batch_size: 50000) { |t| puts t.id }
-    @data = Datum.where(alias: @alias).order(id: :desc).limit(50).each do |d| end
+    @plant = Datum.where(alias: @datum.alias).order(id: :desc).limit(1000).each do |d| end
   #    @data = Datum.order(id: :desc).limit(50).each do |d| end
   end
 
